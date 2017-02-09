@@ -29,6 +29,11 @@ public class SpringbootJpaApplication {
 		return personRepository.findOneByName(name);
 	}
 
+	@RequestMapping(value = "/address/{address}")
+	public List<Person> getPersonsByAddress(@PathVariable("address") String address) {
+		return personRepository.findByAddress(address);
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootJpaApplication.class, args);
 	}

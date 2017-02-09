@@ -15,6 +15,7 @@ import java.util.List;
  * Created by luhaoyuan on 2017/2/9.
  */
 
+@SuppressWarnings("JpaQlInspection")
 public interface PersonRepository extends JpaRepository<Person, Long>{
 
     /**
