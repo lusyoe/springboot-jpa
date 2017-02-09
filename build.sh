@@ -1,7 +1,6 @@
 #!/bin/bash
 
-export M2_HOME=/opt/apache-maven-3.3.9
-PATH=$PATH:$M2_HOME/bin
+source /etc/profile
 
 mvn package docker:build
 
