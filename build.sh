@@ -2,7 +2,7 @@
 
 source /etc/profile
 
-docker login -u admin -p admin123
+docker login 192.168.1.2:8082 -u admin -p admin123
 
 mvn package -e -X docker:build -DskipTest
 
