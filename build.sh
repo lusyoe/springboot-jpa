@@ -5,7 +5,7 @@ source /etc/profile
 MYIMAGE=192.168.1.2:8082/springboot/springboot-jpa
 
 # if push image then uncomment
-#docker login 192.168.1.2:8082 -u admin -p admin123
+docker login 192.168.1.2:8082 -u admin -p admin123
 
 # stop all container
 docker kill $(docker ps -aq)
@@ -21,5 +21,8 @@ mvn package -e -X docker:build -DskipTest
 
 # running container
 docker run -dp 8080:8080 --name springboot-jpa ${MYIMAGE}
+
+# push image
+docker push ${MYIMAGE}
 
 
