@@ -2,7 +2,7 @@
 
 source /etc/profile
 
-mvn package docker:build
+mvn package -e -X docker:build
 
 docker run -dp 9090:8080 springboot-jpa-0.0.1
 

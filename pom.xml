@@ -64,9 +64,11 @@
                     <dockerDirectory>src/main/docker</dockerDirectory>
 
                     <resources>
-                        <targetPath>/</targetPath>
-                        <directory>${project.build.finalName}</directory>
-                        <include>${project.build.finalName}.jar</include>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.finalName}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
                     </resources>
                 </configuration>
             </plugin>
