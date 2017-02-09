@@ -1,3 +1,5 @@
+#FROM frolvlad/alpine-oraclejdk8:slim
+
 FROM 192.168.1.2:8082/jdk8
 
 VOLUME /tmp
