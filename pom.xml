@@ -66,7 +66,7 @@
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
-                            <directory>${project.build.finalName}</directory>
+                            <directory>${name}/target</directory>
                             <include>${project.build.finalName}.jar</include>
                         </resource>
                     </resources>
