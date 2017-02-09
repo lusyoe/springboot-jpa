@@ -34,6 +34,11 @@ public class SpringbootJpaApplication {
 		return personRepository.findByAddress(address);
 	}
 
+	@RequestMapping(value = "/count")
+	public long getCount() {
+		return personRepository.count();
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootJpaApplication.class, args);
 	}
